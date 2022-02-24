@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(35deg, #00a8ff, #9c88ff);
+}
+.login-box {
+  border: 1px solid red;
+}
+.face {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #ffcd00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.face::before {
+  content: "";
+  position: absolute;
+  top: 180px;
+  width: 150px;
+  height: 70px;
+  background-color: #eb4d4b;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  transition: 0.5s;
+}
+.face:hover::before {
+  top: 210px;
+  width: 150px;
+  height: 20px;
+  background-color: #eb4d4b;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.eyes {
+  position: relative;
+  top: -40px;
+  display: flex;
+}
+.eyes .eye {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  margin: 0 15px;
+  border-radius: 50%;
+}
+.eyes .eye:hover {
+  background-color: #ffcd00;
+  border: 2px solid black;
+}
+.eyes .eye::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+}
+/* 点击密码框样式off */
+.off {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: #ffcd00;
+  border: 2px solid black;
+  margin: 0 15px;
+  border-radius: 50%;
+}
+.off::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translate(0px, -50%);
+  width: 78px;
+  height: 5px;
+  /* border-radius: 0%; */
+  background-color: black;
+}
+.eyes .eye:hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translate(0px, -50%);
+  width: 78px;
+  height: 5px;
+  /* border-radius: 0%; */
+  background-color: black;
+}
+.login-box .input-box {
+  min-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login-box .input-box .entry {
+  width: 100%;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  padding: 0 5px;
+}
+.login-box .input-box .pwd {
+  width: 100%;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  padding: 0 5px;
+}
+.login-box .input-box .btn {
+  width: 100%;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  color: #fff;
+  background: linear-gradient(35deg, #ff6b6b, #ff9f43);
+  cursor: pointer;
+}
+.login-box .input-box .btn:hover {
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.6);
+}
